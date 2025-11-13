@@ -1,0 +1,132 @@
+body {
+    background: #ffd9e8;
+    font-family: "Poppins", Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+ body {
+    background: #ffd9e8;
+    font-family: "Poppins", Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    background-image: url("https://i.pinimg.com/736x/a8/0c/15/a80c15737e2aafc4f8c9db2a5833435f.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    backdrop-filter: blur(3px);
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 223, 242, 0.55);
+    backdrop-filter: blur(4px);
+    z-index: 0;
+}
+
+/* Fundo com corações subindo */
+.kitty-bg::before {
+    content: "💗 💖 💕 💞 💘";
+    font-size: 40px;
+    position: fixed;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: subir 6s infinite linear;
+}
+
+@keyframes subir {
+    from { top: 100%; opacity: 1; }
+    to { top: -20%; opacity: 0; }
+}
+
+/* Caixa principal */
+.container {
+    background: #fff;
+    padding: 30px;
+    width: 330px;
+    text-align: center;
+    border-radius: 20px;
+    border: 3px solid #ffb3d9;
+    box-shadow: 0 0 25px rgba(255, 105, 180, 0.4);
+    animation: aparecer 0.5s ease;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    background: #ffffffd4;
+    padding: 30px;
+    width: 330px;
+    text-align: center;
+    border-radius: 20px;
+    border: 3px solid #ffb3d9;
+    box-shadow: 0 0 25px rgba(255, 105, 180, 0.4);
+    animation: aparecer 0.5s ease;
+}
+
+
+/* Hello Kitty imagem */
+.kitty-img {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+/* Título */
+.container h2 {
+    color: #d63384;
+    margin-bottom: 15px;
+}
+
+/* Inputs */
+.container input {
+    width: 90%;
+    padding: 12px;
+    background: #ffe6f2;
+    border-radius: 10px;
+    border: 1px solid #ff99cc;
+    margin-bottom: 12px;
+    transition: 0.3s;
+}
+
+.container input:focus {
+    background: #ffccdf;
+    border-color: #ff66b3;
+    outline: none;
+}
+
+/* Botão */
+.container button {
+    width: 95%;
+    padding: 13px;
+    background: #ff66b3;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    box-shadow: 0 4px 12px rgba(255, 105, 180, 0.45);
+    transition: 0.3s;
+}
+
+.container button:hover {
+    background: #ff2e8e;
+    transform: translateY(-2px);
+}
+
+/* Animação suave */
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
