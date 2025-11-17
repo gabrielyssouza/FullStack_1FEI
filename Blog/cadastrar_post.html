@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastrar Post</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-center">
+    <h1>Criar Novo Post </h1>
+    <form action="/salvar-post" method="POST">
+      <label for="titulo">Título</label>
+      <input type="text" id="titulo" name="titulo" required>
+
+      <label for="resumo">Resumo</label>
+      <input type="text" id="resumo" name="resumo">
+
+      <label for="conteudo">Conteúdo</label>
+      <textarea id="conteudo" name="conteudo" rows="6" required></textarea>
+
+      <button class="btn" type="submit">Salvar Post </button>
+    </form>
+    <br>
+    <a href="/blog">⬅ Voltar ao blog</a>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,190 @@
+/* 🌸 style.css — Tema fofo rosa pastel */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Cute+Font&display=swap');
+
+/* ====== BODY ====== */
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #ffe6f2 0%, #ffd6e8 100%);
+  color: #4a2040;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ====== CENTRALIZAÇÃO ====== */
+.page-center {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 35px 40px;
+  background: rgba(255, 255, 255, 0.93);
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(255, 160, 190, 0.3);
+  border: 2px solid #ffc6dc;
+  text-align: center;
+  position: relative; /* Necessário para o brilho */
+}
+
+/* ====== TÍTULOS ====== */
+h1 {
+  font-family: 'Cute Font', cursive;
+  font-size: 2.8rem;
+  color: #e85b93;
+  margin-bottom: 25px;
+  text-shadow: 0 2px 4px rgba(255, 200, 230, 0.8);
+}
+
+/* ====== CAMPOS ====== */
+label {
+  display: block;
+  text-align: left;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #b83f6b;
+  font-size: 15px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 2px solid #ffc6dc;
+  background: #fff8fb;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  resize: none;
+  margin-bottom: 20px;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #ff8cb7;
+  box-shadow: 0 0 10px rgba(255, 140, 183, 0.4);
+}
+
+/* ====== BOTÃO ====== */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #ff96b7, #ff78a6);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #ffb0c9, #ff89b0);
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(255, 150, 190, 0.4);
+}
+
+/* ====== LINKS ====== */
+a {
+  color: #e85b93;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #ff9fbf;
+  text-decoration: underline;
+}
+
+/* ====== FORM ====== */
+form {
+  text-align: left;
+}
+
+/* ====== BRILHO ANIMADO ====== */
+.page-center::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+  top: -50px;
+  left: -50px;
+  filter: blur(15px);
+  animation: sparkle 6s infinite alternate;
+}
+
+@keyframes sparkle {
+  from { transform: translate(0, 0) rotate(0deg); }
+  to { transform: translate(20px, 20px) rotate(15deg); }
+}
+
+/* ================================================================================= */
+/* 🌸 ESTILO ESPECIAL PARA OS POSTS DO BLOG — BONITO, MODERNO E ESTÉTICO */
+/* ================================================================================= */
+
+.post-card {
+  background: linear-gradient(145deg, #fff7fc, #ffeaf4);
+  padding: 25px;
+  border-radius: 20px;
+  border: 2px solid #ffc6dc;
+  width: 90%;
+  margin: 25px auto;
+  text-align: left;
+  box-shadow: 0 8px 20px rgba(255, 150, 190, 0.25);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(255, 150, 190, 0.35);
+}
+
+/* Título do post */
+.post-card h2 {
+  font-family: 'Cute Font', cursive;
+  color: #e85b93;
+  font-size: 2.2rem;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* Resumo */
+.post-card p strong {
+  color: #b83f6b;
+  font-weight: 700;
+}
+
+/* Conteúdo */
+.post-card p {
+  color: #4a2040;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Brilho decorativo */
+.post-card::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, transparent 70%);
+  top: -25px;
+  right: -25px;
+  filter: blur(12px);
+  animation: sparkleBlog 6s infinite alternate;
+}
+
+@keyframes sparkleBlog {
+  from { transform: translate(0,0) rotate(0deg); }
+  to { transform: translate(10px,10px) rotate(20deg); }
+}
